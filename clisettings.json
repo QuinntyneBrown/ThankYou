@@ -1,0 +1,32 @@
+{
+  "projects": null,
+  "path": "C:\\Projects\\ThankYou",
+  "solutionName": null,
+  "rootNamespace": null,
+  "domainNamespace": "ThankYou.Api",
+  "applicationNamespace": "ThankYou.Api",
+  "infrastructureNamespace": "ThankYou.Api",
+  "apiNamespace": "ThankYou.Api",
+  "domainDirectory": "C:\\Projects\\ThankYou\\src\\ThankYou.Api",
+  "applicationDirectory": "C:\\Projects\\ThankYou\\src\\ThankYou.Api",
+  "infrastructureDirectory": "C:\\Projects\\ThankYou\\src\\ThankYou.Api",
+  "apiDirectory": "C:\\Projects\\ThankYou\\src\\ThankYou.Api",
+  "appDirectories": [ "C:\\Projects\\ThankYou\\src\\ThankYou.App" ],
+  "buildingBlocksCoreNamespace": "BuildingBlocks.Core",
+  "buildingBlocksEventStoreNamespace": "BuildingBlocks.EventStore",
+  "store": null,
+  "namespace": null,
+  "domain": null,
+  "core": null,
+  "api": null,
+  "entityIdDataType": null,
+  "sourceFolder": "src",
+  "testFolder": null,
+  "dbContext": "ThankYouDbContext",
+  "eventSourcing": false,
+  "resources": [
+    "Interaction",
+    "Participant",
+    "InteractionParticipant"
+  ]
+}
