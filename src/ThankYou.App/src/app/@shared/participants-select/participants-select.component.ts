@@ -1,7 +1,7 @@
-import { Component, ElementRef, forwardRef, Input, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
-import { AbstractControl, ControlValueAccessor, FormArray, FormControl, FormGroup, NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidationErrors, Validator, Validators } from '@angular/forms';
+import { Component, ElementRef, forwardRef, Input, OnDestroy } from '@angular/core';
+import { AbstractControl, ControlValueAccessor, FormControl, FormGroup, NG_VALIDATORS, NG_VALUE_ACCESSOR, ValidationErrors, Validator, Validators } from '@angular/forms';
 import { map, takeUntil, tap } from 'rxjs/operators';
-import { fromEvent, pipe, Subject } from 'rxjs';
+import { fromEvent, Subject } from 'rxjs';
 import { Participant } from '@api';
 
 @Component({
