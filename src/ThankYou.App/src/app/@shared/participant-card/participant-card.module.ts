@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InteractionsRoutingModule } from './interactions-routing.module';
-import { InteractionsComponent } from './interactions.component';
+import { ParticipantCardComponent } from './participant-card.component';
 import { MaterialModule } from '@shared/material.module';
+
 
 
 @NgModule({
   declarations: [
-    InteractionsComponent
+    ParticipantCardComponent
+  ],
+  exports: [
+    ParticipantCardComponent
   ],
   imports: [
     CommonModule,
-    InteractionsRoutingModule,
     MaterialModule
   ]
 })
-export class InteractionsModule { }
+export class ParticipantCardModule { }

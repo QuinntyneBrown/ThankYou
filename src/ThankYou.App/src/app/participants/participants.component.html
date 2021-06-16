@@ -1,1 +1,9 @@
-<p>participants works!</p>
+<h1>Participants</h1>
+
+<button mat-raised-button>Create</button>
+
+<div class="grid">
+  <app-participant-card [participant]="participant" *ngFor="let participant of participants$ | async">
+
+  </app-participant-card>
+</div>

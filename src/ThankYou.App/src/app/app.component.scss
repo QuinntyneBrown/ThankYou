@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  background-color: red;
+  position: relative;
+  height: 100%;
+
+  mat-drawer-content {
+    box-sizing: border-box;
+    padding: 60px 40px;
+  }
+
+  mat-drawer-container {
+    height: 100%;
+  }
+
+  mat-drawer {
+    width: 300px;
+  }
+
+  ul,
+  li {
+    list-style: none;
+    padding:0;
+    margin: 0;
+    display: block;
+
+    a {
+      text-decoration: none;
+      color: #000;
+
+      &.--active {
+        font-weight: 800;
+      }
+    }
+  }
+
+  ul {
+    margin-top:60px;
+  }
+
+  li {
+    margin: 25px 0px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

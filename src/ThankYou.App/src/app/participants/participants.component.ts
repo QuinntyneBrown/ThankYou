@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Participant, ParticipantService } from '@api';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-participants',
   templateUrl: './participants.component.html',
   styleUrls: ['./participants.component.scss']
 })
-export class ParticipantsComponent implements OnInit {
+export class ParticipantsComponent {
 
-  constructor() { }
+  public participants$: Observable<Participant[]> = this._participantService.get();
 
-  ngOnInit(): void {
+  constructor(
+    private readonly _participantService: ParticipantService
+  ) {
+
   }
 
 }
