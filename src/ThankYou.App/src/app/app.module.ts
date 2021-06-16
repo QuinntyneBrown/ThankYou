@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { baseUrl } from '@core';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '@shared/material.module';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MaterialModule } from '@shared/material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    MatMomentDateModule,
+    MatNativeDateModule
   ],
   providers: [
     {

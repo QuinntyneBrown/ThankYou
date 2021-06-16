@@ -1,0 +1,5 @@
+@use '../cards';
+
+:host {
+  @extend .card;
+}

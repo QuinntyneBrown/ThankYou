@@ -47,7 +47,7 @@ namespace ThankYou.Api.Features
                     participants.Add(_context.Participants.Find(participant.ParticipantId));
                 }
 
-                var interaction = new Interaction(participants, request.Interaction.Description);
+                var interaction = new Interaction(request.Interaction.Date, participants, request.Interaction.Description);
                 
                 _context.Interactions.Add(interaction);
                 

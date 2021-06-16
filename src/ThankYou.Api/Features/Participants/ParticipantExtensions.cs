@@ -1,4 +1,3 @@
-using System;
 using ThankYou.Api.Models;
 
 namespace ThankYou.Api.Features
@@ -9,9 +8,9 @@ namespace ThankYou.Api.Features
         {
             return new ()
             {
-                ParticipantId = participant.ParticipantId
+                ParticipantId = participant.ParticipantId,
+                Name = participant.Name
             };
         }
-        
     }
 }

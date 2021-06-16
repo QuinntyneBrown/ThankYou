@@ -1,0 +1,5 @@
+<span [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger">{{ displayValue$ | async }}</span>
+<i class="material-icons">date_range</i>
+<mat-menu #menu="matMenu">
+  <mat-calendar></mat-calendar>
+</mat-menu>

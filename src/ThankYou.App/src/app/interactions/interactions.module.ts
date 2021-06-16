@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { InteractionsRoutingModule } from './interactions-routing.module';
 import { InteractionsComponent } from './interactions.component';
 import { MaterialModule } from '@shared/material.module';
+import { InteractionCardModule } from '@shared/cards/interaction-card/interaction-card.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MaterialModule } from '@shared/material.module';
   imports: [
     CommonModule,
     InteractionsRoutingModule,
-    MaterialModule
+    MaterialModule,
+    InteractionCardModule
   ]
 })
 export class InteractionsModule { }

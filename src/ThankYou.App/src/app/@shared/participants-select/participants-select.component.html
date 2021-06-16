@@ -1,0 +1,10 @@
+<form novalidate autocomplete='off' spellcheck='false' [formGroup]='form'>
+    <mat-form-field appearance="outline">
+      <mat-label>Select Participant</mat-label>
+      <mat-select multiple=true formControlName="participants" [compareWith]="compareWith">
+        <mat-option *ngFor="let participant of participants" [value]="participant">
+          {{ participant.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+</form>

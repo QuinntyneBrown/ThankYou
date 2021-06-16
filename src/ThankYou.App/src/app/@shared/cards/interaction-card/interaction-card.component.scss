@@ -1,0 +1,17 @@
+@use '../cards';
+
+:host {
+  @extend .card;
+
+  app-readonly-pill {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+
+  mat-icon {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+}

@@ -1,8 +1,8 @@
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Threading.Tasks;
 using ThankYou.Api.Features;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
 
 namespace ThankYou.Api.Controllers
 {

@@ -1,0 +1,18 @@
+@import '../pills';
+
+
+:host {
+  @extend .pill;
+  grid-template-columns: 1fr min-content;
+  background-color: #E6EBEE;
+  border-color: #E6EBEE;
+
+  i.material-icons {
+    height: 20px;
+    width: 20px;
+    color:#0E314C;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: -5px;
+  }
+}

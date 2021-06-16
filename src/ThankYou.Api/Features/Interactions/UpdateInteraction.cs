@@ -41,7 +41,7 @@ namespace ThankYou.Api.Features
             {
                 var interaction = await _context.Interactions.SingleAsync(x => x.InteractionId == request.Interaction.InteractionId);
 
-                interaction.UpdateDescription(request.Interaction.Description);
+                interaction.Update(request.Interaction.Date, request.Interaction.Description);
                 
                 await _context.SaveChangesAsync(cancellationToken);
                 

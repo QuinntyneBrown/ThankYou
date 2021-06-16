@@ -32,13 +32,23 @@ namespace ThankYou.Api.Models
             Description = description;
         }
 
-        private Interaction()
+        public Interaction(DateTime date, List<Participant> participants, string description)
         {
+            foreach (var participant in participants)
+            {
+                InteractionParticipants.Add(new(participant.ParticipantId));
+            }
 
+            Date = date;
+            Description = description;
         }
 
-        public void UpdateDescription(string description)
+        private Interaction()
+        { }
+
+        public void Update(DateTime date, string description)
         {
+            Date = date;
             Description = description;
         }
     }

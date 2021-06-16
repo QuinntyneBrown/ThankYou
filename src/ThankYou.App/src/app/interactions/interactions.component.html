@@ -1,3 +1,13 @@
-<h1>Interactions</h1>
+<ng-container *ngIf="vm$ | async as vm">
+  <h1>Interactions</h1>
 
-<button mat-raised-button>Create</button>
+  <div class="g-button-group">
+    <button mat-raised-button class="g-button" (click)="create()">Create</button>
+  </div>
+
+  <div class="g-grid">
+    <app-interaction-card *ngFor="let interaction of vm.interactions" [interaction]="interaction" (click)="edit(interaction)">
+    </app-interaction-card>
+  </div>
+
+</ng-container>

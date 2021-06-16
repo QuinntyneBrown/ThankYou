@@ -29,7 +29,10 @@ namespace ThankYou.Api.Features
             public async Task<Response> Handle(Request request, CancellationToken cancellationToken)
             {
                 return new () {
-                    Interactions = await _context.Interactions.Select(x => x.ToDto()).ToListAsync()
+                    Interactions = await _context.Interactions
+                    .Include(x => x.InteractionParticipants)
+                    .ThenInclude(x => x.Participant)
+                    .Select(x => x.ToDto()).ToListAsync()
                 };
             }
             

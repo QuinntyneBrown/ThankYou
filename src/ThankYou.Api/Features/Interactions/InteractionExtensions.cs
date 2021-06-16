@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using ThankYou.Api.Models;
 
 namespace ThankYou.Api.Features
@@ -9,7 +10,10 @@ namespace ThankYou.Api.Features
         {
             return new ()
             {
-                InteractionId = interaction.InteractionId
+                InteractionId = interaction.InteractionId,
+                Date = interaction.Date,
+                Description = interaction.Description,
+                Participants = interaction.InteractionParticipants?.Select(x => x.Participant.ToDto()).ToList()
             };
         }
         

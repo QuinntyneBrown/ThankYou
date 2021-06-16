@@ -1,0 +1,23 @@
+.card {
+  display: block;
+  min-height: 150px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  mat-card {
+    height: 100%;
+    padding:40px;
+    box-sizing: border-box;
+  }
+
+  mat-icon {
+    color: #ccc;
+    position: absolute;
+    top:30px;
+    right: 40px;
+  }
+
+  mat-card-title {
+    margin: 60px 0px 20px;
+  }
+}

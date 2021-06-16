@@ -13,9 +13,14 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   imports: [
+    MatDialogModule,
     MatTabsModule,
     MatToolbarModule,
     MatIconModule,
@@ -29,9 +34,13 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatSnackBarModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatRadioModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatMenuModule
   ],
   exports: [
+    MatDialogModule,
     MatTabsModule,
     MatToolbarModule,
     MatIconModule,
@@ -45,7 +54,13 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatSnackBarModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatRadioModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatMenuModule
+  ],
+  providers: [
+
   ]
 })
 export class MaterialModule { }

@@ -1,0 +1,5 @@
+@import '../pills';
+
+:host {
+  @extend .pill;
+}

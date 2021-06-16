@@ -1,9 +1,24 @@
-<h1>Participants</h1>
+<ng-container *ngIf="vm$ | async as vm">
+  <h1>Participants</h1>
 
-<button mat-raised-button>Create</button>
+  <app-participant-editor [formControl]="participantControl">
 
-<div class="grid">
-  <app-participant-card [participant]="participant" *ngFor="let participant of participants$ | async">
+  </app-participant-editor>
 
-  </app-participant-card>
-</div>
+  <div class="g-button-group">
+    <button mat-button (click)="cancel()">
+      Cancel
+    </button>
+    <button mat-button (click)="save()" [disabled]="participantControl.pristine">
+      Save
+    </button>
+  </div>
+
+  <div class="g-grid">
+
+    <app-participant-card [participant]="participant" *ngFor="let participant of vm.participants">
+
+    </app-participant-card>
+
+  </div>
+</ng-container>

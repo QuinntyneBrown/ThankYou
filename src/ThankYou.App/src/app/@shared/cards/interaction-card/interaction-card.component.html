@@ -1,0 +1,14 @@
+<mat-card>
+  <app-readonly-pill>{{ interaction.date | date: 'dd/MM/YY' }}</app-readonly-pill>
+
+  <mat-icon>
+    delete
+  </mat-icon>
+
+  <mat-card-title>
+    {{ interaction.participants[0].name }}
+  </mat-card-title>
+  <mat-card-content>
+    {{ interaction.description}}
+  </mat-card-content>
+</mat-card>
