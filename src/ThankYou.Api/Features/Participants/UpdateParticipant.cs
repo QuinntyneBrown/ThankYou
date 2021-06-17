@@ -16,8 +16,7 @@ namespace ThankYou.Api.Features
             {
                 RuleFor(request => request.Participant).NotNull();
                 RuleFor(request => request.Participant).SetValidator(new ParticipantValidator());
-            }
-        
+            }        
         }
 
         public class Request: IRequest<Response>
@@ -43,12 +42,11 @@ namespace ThankYou.Api.Features
                 
                 await _context.SaveChangesAsync(cancellationToken);
                 
-                return new Response()
+                return new ()
                 {
                     Participant = participant.ToDto()
                 };
-            }
-            
+            }            
         }
     }
 }

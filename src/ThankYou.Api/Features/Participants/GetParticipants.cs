@@ -1,12 +1,11 @@
 using MediatR;
-using System;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Linq;
-using System.Collections.Generic;
 using ThankYou.Api.Core;
 using ThankYou.Api.Interfaces;
-using Microsoft.EntityFrameworkCore;
 
 namespace ThankYou.Api.Features
 {
