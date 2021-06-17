@@ -1,17 +1,9 @@
+@use '../popups';
+
 :host {
-  min-height: 60vh;
-  min-width: 60vh;
-  display: block;
-  position: relative;
-  box-sizing: border-box;
+  @extend .popup;
 
   app-datepicker-pill {
     margin: 0px 0px 20px;
-  }
-
-  button[mat-icon-button] {
-    position: absolute;
-    top:0;
-    right: 0;
   }
 }

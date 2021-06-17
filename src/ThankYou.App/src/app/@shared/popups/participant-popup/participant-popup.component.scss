@@ -1,0 +1,6 @@
+@use '../popups';
+
+:host {
+  @extend .popup;
+
+}
