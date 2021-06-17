@@ -17,6 +17,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatRadioModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatDialogModule,
@@ -57,7 +59,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatRadioModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressSpinnerModule
   ],
   providers: [
 
