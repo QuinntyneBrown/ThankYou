@@ -38,7 +38,14 @@ namespace ThankYou.Api.Controllers
         [ProducesResponseType(typeof(GetInteractions.Response), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<GetInteractions.Response>> Get()
             => await _mediator.Send(new GetInteractions.Request());
-        
+
+        [HttpGet("search/{propertyName}/{searchTerm}", Name = "SearchInteractionsRoute")]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(SearchInteractions.Response), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<SearchInteractions.Response>> Get([FromRoute]SearchInteractions.Request request)
+            => await _mediator.Send(request);
+
         [HttpPost(Name = "CreateInteractionRoute")]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
