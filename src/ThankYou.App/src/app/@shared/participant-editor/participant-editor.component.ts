@@ -61,7 +61,11 @@ export class ParticipantEditorComponent implements ControlValueAccessor,  Valida
   }
 
   registerOnChange(fn: any): void {
-    this.form.valueChanges.subscribe(fn);
+    this.form.valueChanges
+    .pipe(
+      takeUntil(this._destroyed$)
+    )
+    .subscribe(fn);
   }
 
   registerOnTouched(fn: any): void {
