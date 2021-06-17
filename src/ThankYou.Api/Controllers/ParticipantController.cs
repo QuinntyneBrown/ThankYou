@@ -31,7 +31,14 @@ namespace ThankYou.Api.Controllers
         
             return response;
         }
-        
+
+        [HttpGet("search/{propertyName}/{searchTerm}", Name = "SearchParticipantsRoute")]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(SearchParticipants.Response), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<SearchParticipants.Response>> Search([FromRoute] SearchParticipants.Request request)
+            => await _mediator.Send(request);
+
         [HttpGet(Name = "GetParticipantsRoute")]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
