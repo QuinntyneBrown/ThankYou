@@ -6,7 +6,7 @@
   </div>
 
   <div class="g-grid">
-    <app-interaction-card *ngFor="let interaction of vm.interactions" [interaction]="interaction" (click)="edit(interaction)">
+    <app-interaction-card (deleted)="handleDelete($event)" *ngFor="let interaction of vm.interactions" [interaction]="interaction" (click)="edit(interaction)">
     </app-interaction-card>
   </div>
 

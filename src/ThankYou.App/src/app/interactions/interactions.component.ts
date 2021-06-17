@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Interaction, InteractionService } from '@api';
 import { InteractionPopupComponent } from '@shared/popups';
@@ -10,7 +10,7 @@ import { map, startWith, switchMap, takeUntil, tap } from 'rxjs/operators';
   templateUrl: './interactions.component.html',
   styleUrls: ['./interactions.component.scss']
 })
-export class InteractionsComponent implements OnInit, OnDestroy {
+export class InteractionsComponent implements OnDestroy {
 
   private readonly _destroyed$ = new Subject();
 
@@ -28,8 +28,12 @@ export class InteractionsComponent implements OnInit, OnDestroy {
     private readonly _interactionService: InteractionService
   ) { }
 
-  ngOnInit(): void {
-
+  handleDelete(interaction: Interaction) {
+    this._interactionService.remove({ interaction })
+    .pipe(
+      takeUntil(this._destroyed$),
+      tap(x => this._refresh$.next())
+    ).subscribe();
   }
 
   public edit(interaction: Interaction) {

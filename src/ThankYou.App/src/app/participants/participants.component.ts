@@ -28,6 +28,16 @@ export class ParticipantsComponent implements OnDestroy {
     private readonly _participantService: ParticipantService
   ) { }
 
+
+  handleDelete(participant: Participant) {
+    this._participantService.remove({ participant })
+    .pipe(
+      takeUntil(this._destroyed$),
+      tap(x => this._refresh$.next())
+    ).subscribe();
+  }
+
+
   public save() {
     const participant = this.participantControl.value;
 

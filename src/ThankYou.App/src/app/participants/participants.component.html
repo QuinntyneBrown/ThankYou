@@ -16,7 +16,7 @@
 
   <div class="g-grid">
 
-    <app-participant-card [participant]="participant" *ngFor="let participant of vm.participants">
+    <app-participant-card (deleted)="handleDelete(participant)" [participant]="participant" *ngFor="let participant of vm.participants">
 
     </app-participant-card>
 

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Interaction } from '@api';
 
 @Component({
@@ -8,4 +8,7 @@ import { Interaction } from '@api';
 })
 export class InteractionCardComponent {
   @Input() interaction: Interaction;
+
+  @Output() deleted: EventEmitter<any> = new EventEmitter();
+
 }

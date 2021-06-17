@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Participant } from '@api';
 
 @Component({
@@ -6,14 +6,7 @@ import { Participant } from '@api';
   templateUrl: './participant-card.component.html',
   styleUrls: ['./participant-card.component.scss']
 })
-export class ParticipantCardComponent implements OnInit {
-
-
+export class ParticipantCardComponent {
   @Input() public participant: Participant;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  @Output() public deleted: EventEmitter<any> = new EventEmitter();
 }

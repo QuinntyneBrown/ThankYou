@@ -1,7 +1,7 @@
 <mat-card>
   <app-readonly-pill>{{ interaction.date | date: 'dd/MM/YY' }}</app-readonly-pill>
 
-  <mat-icon>
+  <mat-icon (click)="deleted.emit(interaction); $event.stopPropagation()">
     delete
   </mat-icon>
 

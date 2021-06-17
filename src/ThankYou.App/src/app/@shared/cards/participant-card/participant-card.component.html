@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-header>
-    <mat-icon>
+    <mat-icon (click)="deleted.emit(participant); $event.stopPropagation()">
       delete
     </mat-icon>
   </mat-card-header>
