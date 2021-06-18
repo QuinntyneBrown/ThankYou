@@ -1,4 +1,4 @@
-<ng-container *ngIf="vm$ | async as vm">
+<ng-container *ngIf="vm$ | async as vm; else loading">
   <h1>Participants</h1>
 
   <app-participant-editor [formControl]="participantControl">
@@ -22,3 +22,9 @@
 
   </div>
 </ng-container>
+
+<ng-template #loading>
+  <div class="g-loading">
+    <mat-spinner mode="indeterminate"></mat-spinner>
+  </div>
+</ng-template>
