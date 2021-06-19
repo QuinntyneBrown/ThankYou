@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ThankYou.Api.Data
 {
-    public class ParticipantConfiguration: IEntityTypeConfiguration<Participant>
+    public class ParticipantConfiguration : IEntityTypeConfiguration<Participant>
     {
         public void Configure(EntityTypeBuilder<Participant> builder)
         {
-            
+
         }
-        
+
     }
 }

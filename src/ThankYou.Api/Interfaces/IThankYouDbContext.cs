@@ -11,6 +11,6 @@ namespace ThankYou.Api.Interfaces
         DbSet<Participant> Participants { get; }
         DbSet<InteractionParticipant> InteractionParticipants { get; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
-        
+
     }
 }

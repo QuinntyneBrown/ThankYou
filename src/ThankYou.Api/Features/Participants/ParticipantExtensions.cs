@@ -6,7 +6,7 @@ namespace ThankYou.Api.Features
     {
         public static ParticipantDto ToDto(this Participant participant)
         {
-            return new ()
+            return new()
             {
                 ParticipantId = participant.ParticipantId,
                 Name = participant.Name

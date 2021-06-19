@@ -8,7 +8,7 @@ namespace ThankYou.Api.Features
     {
         public static InteractionDto ToDto(this Interaction interaction)
         {
-            return new ()
+            return new()
             {
                 InteractionId = interaction.InteractionId,
                 Date = interaction.Date,
@@ -16,6 +16,6 @@ namespace ThankYou.Api.Features
                 Participants = interaction.InteractionParticipants?.Select(x => x.Participant.ToDto()).ToList()
             };
         }
-        
+
     }
 }
