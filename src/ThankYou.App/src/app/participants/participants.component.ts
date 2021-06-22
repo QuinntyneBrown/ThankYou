@@ -1,6 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Participant, ParticipantService } from '@api';
+import { ParticipantPopupComponent } from '@shared';
 import { Observable, Subject } from 'rxjs';
 import { map, startWith, switchMap, takeUntil, tap, toArray } from 'rxjs/operators';
 
@@ -25,7 +27,8 @@ export class ParticipantsComponent implements OnDestroy {
   public participantControl = new FormControl(null, []);
 
   constructor(
-    private readonly _participantService: ParticipantService
+    private readonly _participantService: ParticipantService,
+    private readonly _dialog: MatDialog
   ) { }
 
 
@@ -37,6 +40,16 @@ export class ParticipantsComponent implements OnDestroy {
     ).subscribe();
   }
 
+  public create() {
+    this._dialog.open<ParticipantPopupComponent>(ParticipantPopupComponent,{
+      autoFocus: false
+    })
+    .afterClosed()
+    .pipe(
+      takeUntil(this._destroyed$)
+    )
+    .subscribe();
+  }
 
   public save() {
     const participant = this.participantControl.value;
