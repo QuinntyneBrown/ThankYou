@@ -3,3 +3,14 @@
     close
   </mat-icon>
 </button>
+
+<h1>Create Participant</h1>
+
+<app-participant-editor [formControl]="formControl">
+
+</app-participant-editor>
+
+<div class="g-button-group">
+  <button mat-button (click)="save()">Save</button>
+  <button mat-button (click)="cancel()">Cancel</button>
+</div>

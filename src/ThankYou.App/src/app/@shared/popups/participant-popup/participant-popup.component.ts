@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-participant-popup',
@@ -7,5 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParticipantPopupComponent  {
 
+  public formControl: FormControl = new FormControl(null,[]);
+  public save() {
 
+  }
+
+  public cancel() {
+
+  }
 }
