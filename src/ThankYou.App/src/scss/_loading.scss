@@ -1,7 +1,5 @@
 .g-loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   height: 100%;
-  box-sizing: border-box;
 }
